@@ -1,7 +1,7 @@
 <template>
   <div class="topNav">
-    <div class="logo" @click="toggleAside">LOGO</div>
-    <span class="toggler"></span>
+    <div class="logo" >LOGO</div>
+    <span class="toggler" @click="toggleAside"></span>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -39,7 +39,7 @@ export default {
   }
 
   > .toggler {
-    display: inline-block;
+    display: none;
     width: 24px;
     height: 24px;
     background: red;
@@ -65,6 +65,9 @@ export default {
     }
     > .logo {
       margin: 0 auto;
+    }
+    > .toggler {
+      display: inline-block;
     }
   }
 
