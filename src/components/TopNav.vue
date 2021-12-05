@@ -28,6 +28,8 @@ export default {
   z-index: 10;
   background: pink;
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 16px;
 
   > .logo {
@@ -44,5 +46,16 @@ export default {
       margin: 0 1em;
     }
   }
+
+  @media (max-width: 500px) {
+    > .menu {
+      display: none;
+    }
+    > .logo {
+      margin: 0 auto;
+    }
+  }
+
+
 }
 </style>
