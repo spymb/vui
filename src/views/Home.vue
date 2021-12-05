@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="layout">
     <TopNav/>
     <div class="banner">
       <h1>UI</h1>
@@ -13,24 +13,34 @@
 </template>
 
 <script lang="ts">
-import TopNav from '../components/TopNav.vue'
+import TopNav from '../components/TopNav.vue';
+
 export default {
   components: {TopNav}
-}
+};
 </script>
 
 <style lang="scss" scoped>
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 .banner {
+  flex-grow: 1;
   padding: 100px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background: lightgreen;
-  > .actions{
+
+  > .actions {
     padding: 8px 0;
+
     a {
-      margin:0 8px;
+      margin: 0 8px;
       background: #fff;
       display: inline-block;
       $h: 28px;
