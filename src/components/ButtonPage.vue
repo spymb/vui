@@ -1,7 +1,12 @@
 <template>
   <div>
     button
-    <Button/>
+    <span>
+      <Button>b1</Button>
+      <Button theme="button">b2</Button>
+      <Button theme="link">b3</Button>
+      <Button theme="text">b4</Button>
+    </span>
   </div>
 </template>
 
