@@ -12,7 +12,7 @@ export default {
   },
   setup(props, context) {
     const toggle = () => {
-      context.emit('clickButton', !props.value)
+      context.emit('update:value', !props.value)
     };
     return {toggle};
   }
