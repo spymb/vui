@@ -42,6 +42,12 @@
         <Button theme="text" level="danger">危险文字按钮</Button>
       </div>
     </div>
+    <h1>disabled demo</h1>
+    <div>
+      <Button disabled>禁用按钮</Button>
+      <Button theme="link" disabled>禁用按钮</Button>
+      <Button theme="text" disabled>禁用按钮</Button>
+    </div>
   </div>
 </template>
 
