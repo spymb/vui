@@ -48,6 +48,10 @@
       <Button theme="link" disabled>禁用按钮</Button>
       <Button theme="text" disabled>禁用按钮</Button>
     </div>
+    <h1>loading demo</h1>
+    <div>
+      <Button loading>加载中</Button>
+    </div>
   </div>
 </template>
 
