@@ -8,9 +8,21 @@
     </div>
     <h1>size demo</h1>
     <div>
-      <Button size="big">s1</Button>
-      <Button>s2</Button>
-      <Button size="small">s3</Button>
+      <div>
+        <Button size="big">大</Button>
+        <Button>中</Button>
+        <Button size="small">小</Button>
+      </div>
+      <div>
+        <Button theme="link" size="big">大</Button>
+        <Button theme="link">中</Button>
+        <Button size="small" theme="link">小</Button>
+      </div>
+      <div>
+        <Button size="big" theme="text">大</Button>
+        <Button theme="text">中</Button>
+        <Button size="small" theme="text">小</Button>
+      </div>
     </div>
   </div>
 </template>
