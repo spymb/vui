@@ -2,7 +2,15 @@
   <div>
     <Button @click="toggle">显示对话框</Button>
     <Dialog v-model:visible="x" :closeOnClickOverlay="false"
-            :ok="f1" :cancel="f2"/>
+            :ok="f1" :cancel="f2">
+      <template v-slot:title>
+        <strong>加粗的标题</strong>
+      </template>
+      <template v-slot:content>
+        <strong>加粗的第一行</strong>
+        <div>未加粗的第二行</div>
+      </template>
+    </Dialog>
   </div>
 </template>
 
