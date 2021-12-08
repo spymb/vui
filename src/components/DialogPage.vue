@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="position: relative; z-index: 1;">
     <Button @click="toggle">显示对话框</Button>
     <Dialog v-model:visible="x" :closeOnClickOverlay="false"
             :ok="f1" :cancel="f2">
@@ -12,6 +12,8 @@
       </template>
     </Dialog>
   </div>
+  <div style="position: relative; z-index: 2;
+  width: 300px; height: 300px; background: red;"></div>
 </template>
 
 <script lang="ts">
