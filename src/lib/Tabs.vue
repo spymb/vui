@@ -1,14 +1,17 @@
 <template>
- <div class="gulu-tabs">
-  <div class="gulu-tabs-nav">
-    <div class="gulu-tabs-nav-item" v-for="(t,index) in titles" :key="index"
-         @click="select(t)" :class="{selected: t=== selected}">{{t}}</div>
+  <div class="gulu-tabs">
+    <div class="gulu-tabs-nav">
+      <div class="gulu-tabs-nav-item" v-for="(t,index) in titles" :key="index"
+           @click="select(t)" :class="{selected: t=== selected}">
+        {{ t }}
+      </div>
+      <div class="gulu-tabs-nav-indicator"></div>
+    </div>
+    <div class="gulu-tabs-content">
+      <component class="gulu-tabs-content-item" v-for="(c,index) in defaults" :key="index" :is="c"
+                 :class="{selected: c.props.title === selected }"/>
+    </div>
   </div>
-  <div class="gulu-tabs-content">
-    <component class="gulu-tabs-content-item" v-for="(c,index) in defaults" :key="index" :is="c"
-               :class="{selected: c.props.title === selected }"/>
-  </div>
-</div>
 </template>
 
 <script lang="ts">
@@ -31,8 +34,8 @@ export default {
       return tag.props.title;
     });
     const select = (title: string) => {
-      context.emit('update:selected', title)
-    }
+      context.emit('update:selected', title);
+    };
     return {
       defaults,
       titles,
@@ -51,23 +54,39 @@ $border-color: #d9d9d9;
     display: flex;
     color: $color;
     border-bottom: 1px solid $border-color;
+    position: relative;
+
     &-item {
       padding: 8px 0;
       margin: 0 16px;
       cursor: pointer;
+
       &:first-child {
         margin-left: 0;
       }
+
       &.selected {
         color: $blue;
       }
     }
+
+    &-indicator {
+      position: absolute;
+      height: 3px;
+      background: $blue;
+      left: 0;
+      bottom: -1px;
+      width: 100px;
+    }
   }
+
   &-content {
     text-align: left;
     padding: 8px 0;
+
     &-item {
       display: none;
+
       &.selected {
         display: block;
       }
