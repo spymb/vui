@@ -2,10 +2,10 @@
   <div class="gulu-tabs">
     <div class="gulu-tabs-nav" ref="container">
       <div class="gulu-tabs-nav-item"
-           v-for="(t,index) in titles" :key="index"
-           @click="select(t)" :class="{selected: t === selected}"
-           :ref="el => { if (t === selected) selectedItem = el }">
-        {{ t }}
+           v-for="(title,index) in titles" :key="index"
+           @click="select(title)" :class="{selected: title === selected}"
+           :ref="el => { if (title === selected) selectedItem = el }">
+        {{ title }}
       </div>
       <div class="gulu-tabs-nav-indicator" ref="indicator"></div>
     </div>
