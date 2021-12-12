@@ -75,6 +75,7 @@ export default {
       height: 100%;
       width: 150px;
       padding: 60px 0 16px;
+      z-index: 10;
 
       > h2 {
         margin-bottom: 4px;

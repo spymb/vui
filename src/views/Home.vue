@@ -25,7 +25,7 @@
           <use xlink:href="#icon-ts"></use>
         </svg>
         <h3>基于 TypeScript </h3>
-        <p>源代码采用 TypeScript 书写（非严格检查）</p>
+        <p>源代码采用 TypeScript 书写</p>
       </li>
       <li>
         <svg>
@@ -86,7 +86,6 @@ $color: #007974;
 }
 
 .features {
-  text-align: left;
   margin: 64px auto;
   width: 400px;
 
@@ -106,8 +105,8 @@ $color: #007974;
       width: 400px;
       margin: 16px 0;
       display: grid;
-      justify-content: start;
-      align-content: space-between;
+      justify-content: center;
+      align-content: center;
       grid-template-areas:
         "icon title"
         "icon text";

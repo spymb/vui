@@ -1,11 +1,10 @@
 <template>
-  <div>
-    <Demo :component="ButtonDemo1"/>
-    <Demo :component="ButtonDemo2"/>
-    <Demo :component="ButtonDemo3"/>
-    <Demo :component="ButtonDemo4"/>
-    <Demo :component="ButtonDemo5"/>
-  </div>
+  <h1>Button 示例</h1>
+  <Demo :component="ButtonDemo1"/>
+  <Demo :component="ButtonDemo2"/>
+  <Demo :component="ButtonDemo3"/>
+  <Demo :component="ButtonDemo4"/>
+  <Demo :component="ButtonDemo5"/>
 </template>
 
 <script lang="ts">

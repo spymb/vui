@@ -104,7 +104,6 @@ $border-color: #d9d9d9;
   }
 
   &-content {
-    text-align: left;
     padding: 8px 0;
   }
 }
