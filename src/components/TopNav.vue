@@ -1,10 +1,15 @@
 <template>
   <div class="topNav">
-    <div class="logo" >LOGO</div>
+    <div class="logo">
+      <svg class="icon">
+        <use xlink:href="#icon-lunzi"></use>
+      </svg>
+    </div>
     <span class="toggler" @click="toggleAside"></span>
     <ul class="menu">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <li>
+        <router-link to="/doc">文档</router-link>
+      </li>
     </ul>
   </div>
 </template>
@@ -24,13 +29,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$color: #007974;
+
 .topNav {
+  color: $color;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 10;
-  background: pink;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,6 +46,11 @@ export default {
   > .logo {
     max-width: 6em;
     margin-right: auto;
+
+    > svg {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   > .toggler {
