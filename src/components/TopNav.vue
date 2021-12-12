@@ -1,11 +1,13 @@
 <template>
   <div class="topNav">
-    <div class="logo">
+    <router-link to="/" class="logo">
       <svg class="icon">
         <use xlink:href="#icon-lunzi"></use>
       </svg>
-    </div>
-    <span class="toggler" @click="toggleAside"></span>
+    </router-link>
+    <svg v-if="togglerVisible" class="toggler" @click="toggleAside">
+      <use xlink:href="#icon-menu"></use>
+    </svg>
     <ul class="menu">
       <li>
         <router-link to="/doc">文档</router-link>
@@ -18,6 +20,12 @@
 import {inject, Ref} from 'vue';
 
 export default {
+  props: {
+    togglerVisible: {
+      type: Boolean,
+      default: false
+    }
+  },
   setup() {
     const asideVisible = inject<Ref<boolean>>('asideVisible');
     const toggleAside = function () {
@@ -55,9 +63,8 @@ $color: #007974;
 
   > .toggler {
     display: none;
-    width: 24px;
-    height: 24px;
-    background: red;
+    width: 32px;
+    height: 32px;
     position: absolute;
     left: 16px;
     top: 50%;
