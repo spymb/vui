@@ -1,64 +1,31 @@
 <template>
   <div>
-    <h1>theme demo</h1>
-    <div>
-      <Button>b1</Button>
-      <Button theme="link">b2</Button>
-      <Button theme="text">b3</Button>
-    </div>
-    <h1>size demo</h1>
-    <div>
-      <div>
-        <Button size="big">大</Button>
-        <Button>中</Button>
-        <Button size="small">小</Button>
-      </div>
-      <div>
-        <Button theme="link" size="big">大</Button>
-        <Button theme="link">中</Button>
-        <Button size="small" theme="link">小</Button>
-      </div>
-      <div>
-        <Button size="big" theme="text">大</Button>
-        <Button theme="text">中</Button>
-        <Button size="small" theme="text">小</Button>
-      </div>
-    </div>
-    <h1>level demo</h1>
-    <div>
-      <div>
-        <Button level="main">主要按钮</Button>
-        <Button>普通按钮</Button>
-        <Button level="danger">危险按钮</Button>
-      </div>
-      <div>
-        <Button theme="link" level="main">主要链接按钮</Button>
-        <Button theme="link">普通链接按钮</Button>
-        <Button theme="link" level="danger">危险链接按钮</Button>
-      </div>
-      <div>
-        <Button theme="text" level="main">主要文字按钮</Button>
-        <Button theme="text">普通文字按钮</Button>
-        <Button theme="text" level="danger">危险文字按钮</Button>
-      </div>
-    </div>
-    <h1>disabled demo</h1>
-    <div>
-      <Button disabled>禁用按钮</Button>
-      <Button theme="link" disabled>禁用按钮</Button>
-      <Button theme="text" disabled>禁用按钮</Button>
-    </div>
-    <h1>loading demo</h1>
-    <div>
-      <Button loading>加载中</Button>
-    </div>
+    <Demo :component="ButtonDemo1"/>
+    <Demo :component="ButtonDemo2"/>
+    <Demo :component="ButtonDemo3"/>
+    <Demo :component="ButtonDemo4"/>
+    <Demo :component="ButtonDemo5"/>
   </div>
 </template>
 
 <script lang="ts">
-import Button from '../lib/Button.vue';
+import Demo from './Demo.vue';
+import ButtonDemo1 from './demos/ButtonDemo1.vue';
+import ButtonDemo2 from './demos/ButtonDemo2.vue';
+import ButtonDemo3 from './demos/ButtonDemo3.vue';
+import ButtonDemo4 from './demos/ButtonDemo4.vue';
+import ButtonDemo5 from './demos/ButtonDemo5.vue';
 
 export default {
-  components: {Button}
+  components: {Demo},
+  setup() {
+    return {
+      ButtonDemo1,
+      ButtonDemo2,
+      ButtonDemo3,
+      ButtonDemo4,
+      ButtonDemo5
+    };
+  }
 };
 </script>
