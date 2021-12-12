@@ -68,22 +68,28 @@ export default {
     }
     > aside {
       position: fixed;
+      flex-shrink: 0;
+      background: lightblue;
       top: 0;
       left: 0;
       height: 100%;
-      flex-shrink: 0;
-      background: lightblue;
       width: 150px;
-      padding-top: 60px;
+      padding: 60px 0 16px;
+
       > h2 {
         margin-bottom: 4px;
+        padding: 0 16px;
       }
       > ol {
         > li {
-          padding: 4px 0;
-        }
-        > .lastLi {
-          margin-bottom: 4px;
+          >a {
+            display: block;
+            padding: 4px 16px;
+            text-decoration: none;
+          }
+          .router-link-active {
+            background: white;
+          }
         }
       }
     }
