@@ -1,14 +1,14 @@
 import {createWebHashHistory, createRouter} from 'vue-router';
 import Home from './views/Home.vue';
 import Doc from './views/Doc.vue';
-import Intro from './views/Intro.vue'
-import GetStarted from './views/GetStarted.vue'
-import Install from './views/Install.vue'
 import SwitchPage from './components/SwitchPage.vue';
 import ButtonPage from './components/ButtonPage.vue';
 import DialogPage from './components/DialogPage.vue';
 import TabsPage from './components/TabsPage.vue';
+import Markdown from './components/Markdown.vue';
+import {h} from 'vue';
 
+const md = filename => h(Markdown, { path: `../markdown/${filename}.md`, key: filename })
 const history = createWebHashHistory();
 export const router = createRouter({
   history: history,
@@ -17,9 +17,9 @@ export const router = createRouter({
     {
       path: '/doc', component: Doc,
       children: [
-        {path: 'intro', component: Intro},
-        {path: 'get-started', component: GetStarted},
-        {path: 'install', component: Install},
+        {path: 'intro', component: md('intro')},
+        {path: 'get-started', component: md('get-started')},
+        {path: 'install', component: md('install')},
         {path: 'switch', component: SwitchPage},
         {path: 'button', component: ButtonPage},
         {path: 'dialog', component: DialogPage},
