@@ -54,11 +54,11 @@ $color: #007974;
 .layout {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
+  background: linear-gradient(145deg, #dbe5c6 0%, #90d368 100%);
   clip-path: ellipse(80% 60% at 50% 40%);
 
   > .banner {
-    color: $color;
+    color: #307a04;
     flex-grow: 1;
     padding: 100px 0;
     display: flex;
@@ -71,7 +71,7 @@ $color: #007974;
 
       a {
         margin: 0 8px;
-        background: $green;
+        background: #307a04;
         color: white;
         display: inline-block;
         padding: 8px 24px;

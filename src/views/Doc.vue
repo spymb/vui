@@ -69,7 +69,7 @@ export default {
     > aside {
       position: fixed;
       flex-shrink: 0;
-      background: lightblue;
+      background: #90d368;
       top: 0;
       left: 0;
       height: 100%;
