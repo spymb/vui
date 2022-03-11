@@ -16,7 +16,7 @@ export default {
     },
     size: {
       type: String,
-      default: 'normal'
+      default: 'middle'
     },
     level: {
       type: String,

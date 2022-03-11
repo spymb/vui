@@ -63,12 +63,12 @@ $border-color: #d9d9d9;
   }
 
   &-actions {
-    padding: 8px 16px;
+    padding: 8px 8px;
     border-top: 1px dashed $border-color;
   }
 
   &-code {
-    padding: 8px 16px;
+    padding: 8px 8px;
     border-top: 1px dashed #f5f5f5;
 
     > pre {
