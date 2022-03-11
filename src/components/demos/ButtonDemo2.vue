@@ -5,19 +5,19 @@
 <template>
   <div>
     <div>
-      <Button size="big">大大大</Button>
-      <Button>中中中</Button>
-      <Button size="small">小小小</Button>
+      <Button size="small">中杯</Button>
+      <Button>大杯</Button>
+      <Button size="big">超大杯</Button>
     </div>
     <div>
-      <Button size="big" theme="link">大大大</Button>
-      <Button theme="link">中中中</Button>
-      <Button size="small" theme="link">小小小</Button>
+      <Button size="small" theme="link">中杯</Button>
+      <Button theme="link">大杯</Button>
+      <Button size="big" theme="link">超大杯</Button>
     </div>
     <div>
-      <Button size="big" theme="text">大大大</Button>
-      <Button theme="text">中中中</Button>
-      <Button size="small" theme="text">小小小</Button>
+      <Button size="small" theme="text">中杯</Button>
+      <Button theme="text">大杯</Button>
+      <Button size="big" theme="text">超大杯</Button>
     </div>
   </div>
 </template>

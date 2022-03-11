@@ -8,7 +8,9 @@
     </div>
 
     <div class="demo-actions">
-      <Button @click="toggleCode">查看代码</Button>
+      <Button @click="toggleCode">
+        {{ codeVisible === true ? '隐藏代码' : '显示代码' }}
+      </Button>
     </div>
 
     <div class="demo-code" v-if="codeVisible">
@@ -57,7 +59,7 @@ $border-color: #d9d9d9;
   }
 
   &-component {
-    padding: 16px;
+    padding: 10px;
   }
 
   &-actions {
@@ -67,7 +69,7 @@ $border-color: #d9d9d9;
 
   &-code {
     padding: 8px 16px;
-    border-top: 1px dashed $border-color;
+    border-top: 1px dashed #f5f5f5;
 
     > pre {
       line-height: 1.1;

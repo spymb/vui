@@ -1,7 +1,7 @@
 <template>
   <button class="gulu-button" :class="classes" :disabled="disabled">
     <span v-if="loading" class="gulu-loadingIndicator"></span>
-    <slot/>
+    <span><slot /></span>
   </button>
 </template>
 
@@ -49,7 +49,7 @@ export default {
 $h: 32px;
 $border-color: #d9d9d9;
 $color: #333;
-$blue: #40a9ff;
+$green: #52c41a;
 $red: red;
 $grey: grey;
 $radius: 4px;
@@ -74,8 +74,8 @@ $radius: 4px;
   }
 
   &:hover, &:focus {
-    color: $blue;
-    border-color: $blue;
+    color: $green;
+    border-color: $green;
     outline: none;
   }
 
@@ -83,48 +83,29 @@ $radius: 4px;
     border: 0;
   }
 
-  &.gulu-theme-link {
-    border-color: transparent;
-    box-shadow: none;
-    color: $blue;
-
-    &:hover, &:focus {
-      color: lighten($blue, 10%);
-    }
-  }
-
-  &.gulu-theme-text {
-    border-color: transparent;
-    box-shadow: none;
-    color: inherit;
-
-    &:hover, &:focus {
-      background: darken(white, 5%);;
-    }
-  }
-
-  &.gulu-size-big {
-    font-size: 24px;
-    height: 48px;
-    padding: 0 16px
-  }
-
-  &.gulu-size-small {
-    font-size: 12px;
-    height: 20px;
-    padding: 0 4px;
-  }
-
   &.gulu-theme-button {
     &.gulu-level-main {
-      background: $blue;
+      background: $green;
       color: white;
-      border-color: $blue;
+      border-color: $green;
 
       &:hover,
       &:focus {
-        background: darken($blue, 10%);
-        border-color: darken($blue, 10%);
+        background: darken($green, 10%);
+        border-color: darken($green, 10%);
+      }
+    }
+
+    &.gulu-level-warning {
+      background: #ffc107;
+      color: white;
+      border-color: #ffc107;
+
+      &:hover,
+      &:focus {
+
+        background: darken(#ffc107, 10%);
+        border-color: darken(#ffc107, 10%);
       }
     }
 
@@ -140,8 +121,38 @@ $radius: 4px;
       }
     }
   }
-
   &.gulu-theme-link {
+    border-color: transparent;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      > span {
+        color: $green;
+        border-bottom: 1px solid #222831;
+      }
+    }
+  }
+  &.gulu-theme-text {
+    border-color: transparent;
+    box-shadow: none;
+    color: inherit;
+
+    &:hover, &:focus {
+      color: $green;
+      background: darken(white, 5%);;
+    }
+  }
+  &.gulu-theme-text {
+    &.gulu-level-main {
+      color: $green;
+
+      &:hover,
+      &:focus {
+        color: darken($green, 10%);
+      }
+    }
+
     &.gulu-level-danger {
       color: $red;
 
@@ -152,22 +163,56 @@ $radius: 4px;
     }
   }
 
-  &.gulu-theme-text {
-    &.gulu-level-main {
-      color: $blue;
+  &.gulu-size-big {
+    font-size: 24px;
+    height: 48px;
+    padding: 0 16px
+  }
+  &.gulu-size-small {
+    font-size: 12px;
+    height: 20px;
+    padding: 0 4px;
+  }
+
+  &.gulu-level-main{
+    &.gulu-theme-link {
+      color: $green;
 
       &:hover,
       &:focus {
-        color: darken($blue, 10%);
+        > span {
+          color: darken($green, 10%);
+        }
       }
     }
+  }
+  &.gulu-level-warning{
+    &.gulu-theme-link {
+      color: #ffc107;
 
-    &.gulu-level-danger {
+      &:hover,
+      &:focus {
+        > span {
+          color: darken(#ffc107, 10%);
+        }
+      }
+    }
+    color: #ffc107;
+
+    &:hover, &:focus {
+      color: #ffc107;
+      background: darken(white, 5%);;
+    }
+  }
+  &.gulu-level-danger{
+    &.gulu-theme-link {
       color: $red;
 
       &:hover,
       &:focus {
-        color: darken($red, 10%);
+        > span {
+          color: darken($red, 10%);
+        }
       }
     }
   }
@@ -182,11 +227,15 @@ $radius: 4px;
       }
     }
   }
-
   &.gulu-theme-link, &.gulu-theme-text {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
+      &:hover, &:focus {
+        > span {
+          color: $grey;
+        }
+      }
     }
   }
 
@@ -196,7 +245,7 @@ $radius: 4px;
     display: inline-block;
     margin-right: 4px;
     border-radius: 8px;
-    border-color: $blue $blue $blue transparent;
+    border-color: $green $green $green transparent;
     border-style: solid;
     border-width: 2px;
     animation: gulu-spin 1s infinite linear;
