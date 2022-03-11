@@ -2,19 +2,32 @@
     <h1>Switch 示例</h1>
     <Demo :component="SwitchDemo1"/>
     <Demo :component="SwitchDemo2"/>
+  <Attrs :data="data"/>
 </template>
 
 <script lang="ts">
 import SwitchDemo1 from './demos/SwitchDemo1.vue';
 import SwitchDemo2 from './demos/SwitchDemo2.vue';
 import Demo from './Demo.vue';
+import Attrs from './Attrs.vue';
+import {ref} from 'vue';
 
 export default {
-  components: {Demo},
+  components: {Attrs, Demo},
   setup() {
+    const data = ref([
+      {
+        params: 'disabled',
+        desc: '是否禁用',
+        type: 'boolean',
+        select: 'false / true',
+        default: 'false',
+      },
+    ]);
     return {
       SwitchDemo1,
       SwitchDemo2,
+      data
     };
   }
 };

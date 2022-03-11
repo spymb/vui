@@ -40,7 +40,7 @@ $h2: $h - 4px;
     transition: left 250ms;
   }
   &.gulu-checked {
-    background: blue;
+    background: #52c41a;
   }
 
   &.gulu-checked > span {
