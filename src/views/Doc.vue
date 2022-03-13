@@ -26,8 +26,11 @@
           <li>
             <router-link to="/doc/dialog">Dialog 组件</router-link>
           </li>
-          <li class="lastLi">
+          <li>
             <router-link to="/doc/tabs">Tabs 组件</router-link>
+          </li>
+          <li class="lastLi">
+            <router-link to="/doc/toast">Toast 组件</router-link>
           </li>
         </ol>
       </aside>

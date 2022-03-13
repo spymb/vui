@@ -15,12 +15,11 @@
 </template>
 
 <script lang="ts">
-import type { PropType } from 'vue';
-import { computed, onMounted, ref } from 'vue';
+import type {PropType} from 'vue';
+import {computed, onMounted, ref} from 'vue';
 import {ToastProps, ToastType} from './toast.d';
 
 export default {
-  name: 'Toast',
   props: {
     text: {
       type: String,
@@ -61,7 +60,7 @@ export default {
     },
   },
   emits: ['destroy'],
-  setup(props: ToastProps, { emit }) {
+  setup(props: ToastProps, {emit}) {
     const visible = ref(false);
     const timer = ref(null);
 
@@ -96,7 +95,52 @@ export default {
       timer.value = null;
     };
 
-    return { visible, classes, handleClose, startTimer, clearTimer };
+    return {visible, classes, handleClose, startTimer, clearTimer};
   },
 };
 </script>
+
+<style scoped lang="scss">
+$warning: #f69d32;
+$secondary: #5b5b5b;
+$error: #f01217;
+$success: #0062ec;
+
+.gulu-toast {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  min-width: 380px;
+  border-radius: 5px;
+  background: #fff;
+  color: #000;
+  z-index: 100;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  padding: 15px;
+  transition: top 0.3s;
+
+  > .gulu-toast-close {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    cursor: pointer;
+    color: #c0c4cc;
+    font-size: 20px;
+
+    &:hover {
+      color: #909399;
+    }
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-secondary {
+    background-color: $secondary;
+    color: #fff;
+  }
+}
+</style>
