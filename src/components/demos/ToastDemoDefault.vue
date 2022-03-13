@@ -1,6 +1,6 @@
 <demo>
 常规使用
-<desc>从顶部出现，3秒后消失</desc>
+从顶部出现，3秒后消失
 </demo>
 
 <template>
@@ -16,7 +16,10 @@ export default {
   setup() {
     let index = 1;
     const onClick = () => {
-      Toast({ text: `这是第 ${index++} 条消息提示~` });
+      Toast({
+        text: `这是第 ${index++} 条消息提示~`,
+        center: true
+      });
     };
 
     return { onClick };

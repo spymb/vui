@@ -142,5 +142,19 @@ $success: #0062ec;
     background-color: $secondary;
     color: #fff;
   }
+  &-success {
+    background-color: $success;
+    color: #fff;
+  }
+
+  &-warning {
+    background-color: $warning;
+    color: #fff;
+  }
+
+  &-error {
+    background-color: $error;
+    color: #fff;
+  }
 }
 </style>
