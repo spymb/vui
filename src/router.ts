@@ -8,6 +8,7 @@ import TabsPage from './components/TabsPage.vue';
 import Markdown from './components/Markdown.vue';
 import {h} from 'vue';
 import ToastPage from './components/ToastPage.vue';
+import InputPage from './components/InputPage.vue';
 
 const md = filename => h(Markdown, { path: `../markdown/${filename}.md`, key: filename })
 const history = createWebHashHistory();
@@ -25,6 +26,7 @@ export const router = createRouter({
         {path: 'button', component: ButtonPage},
         {path: 'dialog', component: DialogPage},
         {path: 'tabs', component: TabsPage},
+        {path: 'input', component: InputPage},
         {path: 'toast', component: ToastPage},
       ]
     },

@@ -22,6 +22,7 @@
         @input="onInput"
         @keydown="onKeydown"
     />
+
     <Icon
         v-if="clearable"
         :style="`transform: translateX(${actionIconTransform}px)`"
@@ -43,6 +44,7 @@
 <script lang="ts">
 import type { PropType } from 'vue';
 import { computed, nextTick, ref } from 'vue';
+import Icon from '../components/Icon.vue';
 
 type InputStatusType = 'normal' | 'secondary' | 'error' | 'warning' | 'success';
 type InputSizeType = 'mini' | 'small' | 'medium' | 'large';
@@ -62,7 +64,7 @@ interface InputProps {
 }
 
 export default {
-  components: { Icon },
+  components: {Icon},
   props: {
     value: {
       type: [String, Number],
@@ -220,7 +222,7 @@ $cyan: #39dfbb;
 $fontSize: 14px;
 $height: 36px;
 
-.coast-input-wrapper {
+.gulu-input-wrapper {
   font-size: $fontSize;
   display: inline-flex;
   vertical-align: middle;
@@ -231,7 +233,7 @@ $height: 36px;
   height: $height;
   position: relative;
 
-  .coast-input-action {
+  .gulu-input-action {
     position: absolute;
     right: 10px;
     color: #999;
@@ -244,7 +246,7 @@ $height: 36px;
     }
   }
 
-  .coast-label {
+  .gulu-label {
     width: auto;
     height: $height;
     display: inline-flex;
@@ -270,22 +272,22 @@ $height: 36px;
     }
   }
 
-  &.coast-input-wrapper-size-mini {
+  &.gulu-input-wrapper-size-mini {
     font-size: 12px;
     height: 28px;
   }
 
-  &.coast-input-wrapper-size-small {
+  &.gulu-input-wrapper-size-small {
     font-size: 12px;
     height: 32px;
   }
 
-  &.coast-input-wrapper-size-large {
+  &.gulu-input-wrapper-size-large {
     font-size: 16px;
     height: 40px;
   }
 
-  .coast-input {
+  .gulu-input {
     font-family: inherit;
     font-weight: 400;
     border-radius: 5px;
@@ -300,16 +302,16 @@ $height: 36px;
     border: 1px solid $borderColorGray;
     transition: border 0.2s ease 0s, color 0.2s ease 0s;
 
-    &.coast-input-suffix-clear,
-    &.coast-input-suffix-password {
+    &.gulu-input-suffix-clear,
+    &.gulu-input-suffix-password {
       padding-right: 35px;
     }
 
-    &.coast-input-suffix-clear.coast-input-suffix-password {
+    &.gulu-input-suffix-clear.gulu-input-suffix-password {
       padding-right: 55px;
     }
 
-    &.coast-input-status-secondary {
+    &.gulu-input-status-secondary {
       border-color: $theme;
 
       &:focus {
@@ -317,7 +319,7 @@ $height: 36px;
       }
     }
 
-    &.coast-input-status-warning {
+    &.gulu-input-status-warning {
       border-color: $warning;
 
       &:focus {
@@ -325,7 +327,7 @@ $height: 36px;
       }
     }
 
-    &.coast-input-status-error {
+    &.gulu-input-status-error {
       color: $error;
       border-color: $error;
 
@@ -334,7 +336,7 @@ $height: 36px;
       }
     }
 
-    &.coast-input-status-success {
+    &.gulu-input-status-success {
       border-color: $success;
 
       &:focus {
@@ -342,12 +344,12 @@ $height: 36px;
       }
     }
 
-    &.coast-input-label-left {
+    &.gulu-input-label-left {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
 
-    &.coast-input-label-right {
+    &.gulu-input-label-right {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
