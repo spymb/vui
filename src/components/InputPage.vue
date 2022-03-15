@@ -9,6 +9,7 @@
   <Demo :component="InputDemoLabel" />
   <Demo :component="InputDemoModel" />
   <Demo :component="InputDemoEvent" />
+  <Demo :component="InputDemoDisabled" />
 </template>
 
 <script lang="ts">
@@ -21,9 +22,11 @@ import InputDemoSize from './demos/InputDemoSize.vue';
 import InputDemoLabel from './demos/InputDemoLabel.vue';
 import InputDemoModel from './demos/InputDemoModel.vue';
 import InputDemoEvent from './demos/InputDemoEvent.vue';
+import InputDemoDisabled from './demos/InputDemoDisabled.vue';
 
 export default {
   components: {
+    InputDemoDisabled,
     InputDemoEvent,
     InputDemoModel,
     InputDemoLabel, InputDemoSize, InputDemoLength,
@@ -37,7 +40,8 @@ export default {
       InputDemoSize,
       InputDemoLabel,
       InputDemoModel,
-      InputDemoEvent
+      InputDemoEvent,
+      InputDemoDisabled
     }
   }
 }
