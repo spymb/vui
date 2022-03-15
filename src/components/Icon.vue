@@ -15,8 +15,14 @@ export default {
     prefix: {
       type: String,
       required: false,
-      default: 'gulu-icon-',
+      default: 'icon-',
     },
   },
 };
 </script>
+
+<style scoped lang="scss">
+.gulu-icon {
+  display: block;
+}
+</style>

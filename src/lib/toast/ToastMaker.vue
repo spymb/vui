@@ -8,9 +8,8 @@
   >
     <span>{{ text }}</span>
 
-    <svg class="icon gulu-toast-close" v-if="showClose" @click="handleClose">
-      <use xlink:href="#icon-lunzi"></use>
-    </svg>
+    <Icon name="close2" class="icon gulu-toast-close"
+          v-if="showClose" @click="handleClose"/>
   </div>
 </template>
 
@@ -18,8 +17,10 @@
 import type {PropType} from 'vue';
 import {computed, onMounted, ref} from 'vue';
 import {ToastProps, ToastType} from './toast.d';
+import Icon from '../../components/Icon.vue';
 
 export default {
+  components: {Icon},
   props: {
     text: {
       type: String,

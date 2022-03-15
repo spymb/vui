@@ -40,9 +40,10 @@
 
 <script lang="ts">
 import TopNav from '../components/TopNav.vue';
+import Icon from '../components/Icon.vue';
 
 export default {
-  components: {TopNav}
+  components: {Icon, TopNav}
 };
 </script>
 

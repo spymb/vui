@@ -27,12 +27,12 @@
         v-if="clearable"
         :style="`transform: translateX(${actionIconTransform}px)`"
         class="gulu-input-action"
-        name="clear"
+        name="close2"
         @click="onClear"
     />
     <Icon
         v-if="type === 'password'"
-        :name="passwordVisible ? 'hide' : 'show'"
+        :name="passwordVisible ? 'see' : 'nosee'"
         :style="`transform: translateX(${actionIconTransform + 24}px)`"
         class="gulu-input-action"
         @click="onTogglePasswordVisible"
@@ -48,6 +48,7 @@ import Icon from '../components/Icon.vue';
 
 type InputStatusType = 'normal' | 'secondary' | 'error' | 'warning' | 'success';
 type InputSizeType = 'mini' | 'small' | 'medium' | 'large';
+type InputElementEvent = Event & { target: HTMLInputElement };
 
 interface InputProps {
   value: string | number;
@@ -86,6 +87,7 @@ export default {
     placeholder: {
       type: String,
       required: false,
+      default: '请输入'
     },
     disabled: {
       type: Boolean,
@@ -234,12 +236,12 @@ $height: 36px;
   position: relative;
 
   .gulu-input-action {
+    right: 5px;
+    display: block;
     position: absolute;
-    right: 10px;
-    color: #999;
-    font-size: 20px;
     cursor: pointer;
     height: 100%;
+    width: 22px;
 
     &:hover {
       color: $colorBlack;
