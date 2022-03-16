@@ -32,6 +32,9 @@
           <li>
             <router-link to="/doc/input">Input 组件</router-link>
           </li>
+          <li>
+            <router-link to="/doc/layout">Layout 组件</router-link>
+          </li>
           <li class="lastLi">
             <router-link to="/doc/toast">Toast 组件</router-link>
           </li>

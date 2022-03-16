@@ -1,0 +1,37 @@
+
+.gulu-layout {
+  margin-bottom: 40px;
+  color: #fff;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+
+  &.gulu-layout-has-aside {
+    flex-direction: row;
+  }
+
+  * {
+    text-align: center;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .gulu-header,
+  .gulu-footer {
+    background: #7dbcea;
+    line-height: 60px;
+  }
+  .gulu-content {
+    background: #108ee9;
+    line-height: 120px;
+    flex-grow: 1;
+  }
+  .gulu-aside {
+    background: #3ba0e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
