@@ -12,8 +12,8 @@
             <slot name="content"></slot>
           </main>
           <footer>
-            <Button level="main" @click="ok">OK</Button>
-            <Button @click="cancel">Cancel</Button>
+            <Button level="main" @click="confirm">确认</Button>
+            <Button @click="cancel">取消</Button>
           </footer>
         </div>
       </div>
@@ -35,7 +35,7 @@ export default {
       type: Boolean,
       default: true
     },
-    ok: {
+    confirm: {
       type: Function
     },
     cancel: {
@@ -46,8 +46,8 @@ export default {
     const close = () => {
       context.emit('update:visible', false);
     };
-    const ok = () => {
-      if (props.ok?.() !== false) {
+    const confirm = () => {
+      if (props.confirm?.() !== false) {
         close();
       }
     };
@@ -61,7 +61,7 @@ export default {
       }
     };
     return {
-      close, ok, cancel, onClickOverlay
+      close, confirm, cancel, onClickOverlay
     };
   }
 

@@ -47,14 +47,14 @@ export default {
         params: 'disabled',
         desc: '是否禁用',
         type: 'boolean',
-        select: 'false / true',
+        select: 'true / false',
         default: 'false',
       },
       {
         params: 'loading',
         desc: '是否加载',
         type: 'boolean',
-        select: 'false / true',
+        select: 'true / false',
         default: 'false',
       }
     ]);

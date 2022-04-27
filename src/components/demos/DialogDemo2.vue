@@ -1,41 +1,41 @@
 <demo>
-一键打开 Dialog
+支持 closeOnClickOverlay
 </demo>
 
 <template>
   <div>
-    <Button @click="showDialog">打开对话框</Button>
+    <Button @click="toggle">打开对话框</Button>
+    <Dialog v-model:visible="x" :closeOnClickOverlay="false">
+      <template v-slot:title>
+        <strong>closeOnClickOverlay</strong>
+      </template>
+      <template v-slot:content>
+        <div>1. 默认 closeOnClickOverlay 为 true</div>
+        <div>2. 设置为 false 时点击遮罩层不会关闭对话框</div>
+      </template>
+    </Dialog>
   </div>
 </template>
 
 <script lang="ts">
+import Dialog from '../../lib/Dialog.vue';
 import Button from '../../lib/Button.vue';
 import {
-  h
+  ref
 } from 'vue';
-import {
-  openDialog
-} from '../../lib/openDialog';
 
 export default {
   components: {
+    Dialog,
     Button
   },
   setup() {
-    const showDialog = () => {
-      openDialog({
-        title: h('strong', {}, '标题'),
-        content: '你好',
-        ok() {
-          console.log('ok');
-        },
-        cancel() {
-          console.log('cancel');
-        }
-      });
+    const x = ref(false);
+    const toggle = () => {
+      x.value = !x.value;
     };
     return {
-      showDialog
+      x, toggle
     };
   }
 };

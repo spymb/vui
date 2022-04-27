@@ -20,7 +20,7 @@ export default {
         params: 'disabled',
         desc: '是否禁用',
         type: 'boolean',
-        select: 'false / true',
+        select: 'true / false',
         default: 'false',
       },
     ]);

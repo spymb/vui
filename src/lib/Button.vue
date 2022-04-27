@@ -95,7 +95,6 @@ $radius: 4px;
         border-color: darken($green, 10%);
       }
     }
-
     &.gulu-level-warning {
       background: #ffc107;
       color: white;
@@ -103,12 +102,11 @@ $radius: 4px;
 
       &:hover,
       &:focus {
-
         background: darken(#ffc107, 10%);
+        color: white;
         border-color: darken(#ffc107, 10%);
       }
     }
-
     &.gulu-level-danger {
       background: $red;
       border-color: $red;
@@ -124,7 +122,6 @@ $radius: 4px;
   &.gulu-theme-link {
     border-color: transparent;
     box-shadow: none;
-
     &:hover,
     &:focus {
       > span {
@@ -189,7 +186,6 @@ $radius: 4px;
   &.gulu-level-warning{
     &.gulu-theme-link {
       color: #ffc107;
-
       &:hover,
       &:focus {
         > span {
@@ -197,17 +193,19 @@ $radius: 4px;
         }
       }
     }
-    color: #ffc107;
-
-    &:hover, &:focus {
+    &.gulu-theme-text {
       color: #ffc107;
-      background: darken(white, 5%);;
+      &:hover,
+      &:focus {
+        > span {
+          color: darken(#ffc107, 10%);
+        }
+      }
     }
   }
   &.gulu-level-danger{
     &.gulu-theme-link {
       color: $red;
-
       &:hover,
       &:focus {
         > span {
