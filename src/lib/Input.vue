@@ -87,7 +87,7 @@ export default {
     placeholder: {
       type: String,
       required: false,
-      default: '请输入'
+      default: '请输入内容'
     },
     disabled: {
       type: Boolean,

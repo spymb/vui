@@ -1,15 +1,15 @@
 import {createWebHashHistory, createRouter} from 'vue-router';
 import Home from './views/Home.vue';
 import Doc from './views/Doc.vue';
-import SwitchPage from './components/SwitchPage.vue';
-import ButtonPage from './components/ButtonPage.vue';
-import DialogPage from './components/DialogPage.vue';
-import TabsPage from './components/TabsPage.vue';
+import SwitchPage from './components/page/SwitchPage.vue';
+import ButtonPage from './components/page/ButtonPage.vue';
+import DialogPage from './components/page/DialogPage.vue';
+import TabsPage from './components/page/TabsPage.vue';
 import Markdown from './components/Markdown.vue';
 import {h} from 'vue';
-import ToastPage from './components/ToastPage.vue';
-import InputPage from './components/InputPage.vue';
-import LayoutPage from './components/LayoutPage.vue';
+import ToastPage from './components/page/ToastPage.vue';
+import InputPage from './components/page/InputPage.vue';
+import LayoutPage from './components/page/LayoutPage.vue';
 
 const md = filename => h(Markdown, { path: `../markdown/${filename}.md`, key: filename })
 const history = createWebHashHistory();

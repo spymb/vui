@@ -2,6 +2,9 @@
   <div class="demo">
 
     <h2>{{ component.__sourceCodeTitle }}</h2>
+    <p v-if="component.__sourceDescription" class="description">
+      {{ component.__sourceDescription }}
+    </p>
 
     <div class="demo-component">
       <component :is="component"/>
