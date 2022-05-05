@@ -1,5 +1,5 @@
 <demo>
-默认3秒后自动关闭
+文本居中
 </demo>
 
 <template>
@@ -13,10 +13,10 @@ import {Toast} from '../../../lib/toast/toast';
 export default {
   components: {Button},
   setup() {
-    let index = 1;
     const onClick = () => {
       Toast({
-        text: `这是第 ${index++} 条消息提示`,
+        text: `这条提示文本居中`,
+        center: true
       });
     };
 

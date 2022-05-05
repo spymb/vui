@@ -112,16 +112,17 @@ $success: #0062ec;
   top: 10px;
   left: 50%;
   transform: translate(-50%);
-  min-width: 380px;
+  min-width: 250px;
   border-radius: 5px;
   background: #fff;
   color: #000;
   z-index: 100;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
-  padding: 15px;
+  padding: 10px 15px;
   transition: top 0.3s;
 
   > .gulu-toast-close {
+    margin-left: 50px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

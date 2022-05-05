@@ -1,10 +1,10 @@
 <demo>
-可手动关闭
+可设置自动关闭时间
 </demo>
 
 <template>
-  <Button @click="onClick1">可手动关闭的提示</Button>
-  <Button @click="onClick2">只可手动关闭的提示</Button>
+  <Button @click="onClick1">1秒后自动关闭</Button>
+  <Button @click="onClick2">2秒后自动关闭</Button>
 </template>
 
 <script lang="ts">
@@ -16,19 +16,18 @@ export default {
   setup() {
     const onClick1 = () => {
       Toast({
-        text: '可手动关闭的提示',
-        showClose: true,
+        text: '1秒后自动关闭的提示',
+        delay: 1,
       });
     };
     const onClick2 = () => {
       Toast({
-        text: '只可手动关闭的提示',
-        showClose: true,
-        delay: 0
+        text: '2秒后自动关闭的提示',
+        delay: 2,
       });
     };
 
-    return { onClick1, onClick2};
+    return { onClick1, onClick2 };
   },
 };
 </script>

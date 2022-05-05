@@ -1,13 +1,13 @@
 <demo>
-不同等级的提示
+不同状态的提示
 </demo>
 
 <template>
-  <Button @click="onClick1">普通 normal</Button>
-  <Button @click="onClick2">次级 secondary</Button>
-  <Button @click="onClick3">成功 success</Button>
-  <Button @click="onClick4">警告 warning</Button>
-  <Button @click="onClick5">错误 error</Button>
+  <Button @click="onClick1">normal</Button>
+  <Button @click="onClick2">secondary</Button>
+  <Button @click="onClick3">success</Button>
+  <Button @click="onClick4">warning</Button>
+  <Button @click="onClick5">error</Button>
 </template>
 
 <script lang="ts">
@@ -19,35 +19,35 @@ export default {
   setup() {
     const onClick1 = () => {
       Toast({
-        text: `这是一条普通的提示~`,
+        text: `这是一条普通提示`,
         center: true,
         type: 'normal',
       });
     };
     const onClick2 = () => {
       Toast({
-        text: `这是一条次要的提示~`,
+        text: `这是一条次要提示`,
         center: true,
         type: 'secondary',
       });
     };
     const onClick3 = () => {
       Toast({
-        text: `这是一条成功的提示~`,
+        text: `这是一条成功提示`,
         center: true,
         type: 'success',
       });
     };
     const onClick4 = () => {
       Toast({
-        text: `这是一条警告的提示~`,
+        text: `这是一条警告提示`,
         center: true,
         type: 'warning',
       });
     };
     const onClick5 = () => {
       Toast({
-        text: `这是一条错误的提示~`,
+        text: `这是一条错误提示`,
         center: true,
         type: 'error',
       });
