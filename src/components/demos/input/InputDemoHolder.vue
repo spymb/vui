@@ -1,9 +1,9 @@
 <demo>
-常规用法
+支持 placeholder
 </demo>
 
 <template>
-  <Input v-model:value="value"/>
+  <Input v-model:value="value" placeholder="我是 placehoder"/>
 </template>
 
 <script lang="ts">

@@ -1,10 +1,11 @@
 <demo>
-禁止输入
+支持 disabled 和 readonly
 </demo>
 
 <template>
-  <div><Input value="disabled" disabled /></div>
-  <div><Input value="readonly" readonly /></div>
+  <Input value="disabled" disabled />
+  <br/>
+  <Input value="readonly" readonly />
 </template>
 
 <script lang="ts">

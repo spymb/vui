@@ -3,10 +3,13 @@
 </demo>
 
 <template>
-  <div><Input v-model:value="value" placeholder="mini input" size="mini"/></div>
-  <div><Input v-model:value="value" placeholder="small input" size="small"/></div>
-  <div><Input v-model:value="value" placeholder="medium input" size="medium"/></div>
-  <div><Input v-model:value="value" placeholder="large input" size="large"/></div>
+  <Input v-model:value="value" placeholder="mini input" size="mini"/>
+  <br/>
+  <Input v-model:value="value" placeholder="small input" size="small"/>
+  <br/>
+  <Input v-model:value="value" placeholder="medium input" size="medium"/>
+  <br/>
+  <Input v-model:value="value" placeholder="large input" size="large"/>
 </template>
 
 <script lang="ts">

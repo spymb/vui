@@ -1,4 +1,4 @@
-<demo>支持 type</demo>
+<demo>支持 password</demo>
 
 <template>
   <Input v-model:value="value" type="password" />

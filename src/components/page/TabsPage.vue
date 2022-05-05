@@ -21,13 +21,6 @@ export default {
         select: '--',
         default: '--',
       },
-      {
-        params: 'selected',
-        desc: '默认选择标题',
-        type: 'string',
-        select: '--',
-        default: '--',
-      },
     ]);
     return {
       TabsDemo, data

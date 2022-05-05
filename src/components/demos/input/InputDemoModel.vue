@@ -1,9 +1,9 @@
 <demo>
-v-model
+支持 v-model
 </demo>
 
 <template>
-  <Input v-model:value="value" placeholder="please input content" />
+  <Input v-model:value="value"/>
   input value: {{ value }}
 </template>
 

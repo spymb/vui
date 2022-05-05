@@ -1,11 +1,10 @@
 <demo>
-事件包含: input, change, focus, blur, keydown
+支持 input, change, focus, blur, keydown 等事件监听
 </demo>
 
 <template>
   <Input
       v-model:value="value"
-      placeholder="please input content"
       @input="handleInput"
       @change="handleChange"
       @focus="handleFocus"
