@@ -18,25 +18,25 @@
         <h2>组件列表</h2>
         <ol>
           <li>
-            <router-link to="/doc/button">Button 组件</router-link>
+            <router-link to="/doc/button">Button</router-link>
           </li>
           <li>
-            <router-link to="/doc/switch">Switch 组件</router-link>
+            <router-link to="/doc/switch">Switch</router-link>
           </li>
           <li>
-            <router-link to="/doc/dialog">Dialog 组件</router-link>
+            <router-link to="/doc/dialog">Dialog</router-link>
           </li>
           <li>
-            <router-link to="/doc/tabs">Tabs 组件</router-link>
+            <router-link to="/doc/tabs">Tabs</router-link>
           </li>
           <li>
-            <router-link to="/doc/input">Input 组件</router-link>
+            <router-link to="/doc/input">Input</router-link>
           </li>
           <li>
-            <router-link to="/doc/layout">Layout 组件</router-link>
+            <router-link to="/doc/layout">Layout</router-link>
           </li>
           <li class="lastLi">
-            <router-link to="/doc/toast">Toast 组件</router-link>
+            <router-link to="/doc/toast">Toast</router-link>
           </li>
         </ol>
       </aside>
