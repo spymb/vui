@@ -22,8 +22,6 @@ export const router = createRouter({
       path: '/doc', component: Doc,
       children: [
         {path: 'intro', component: md('intro')},
-        {path: 'get-started', component: md('get-started')},
-        {path: 'install', component: md('install')},
         {path: 'switch', component: SwitchPage},
         {path: 'button', component: ButtonPage},
         {path: 'dialog', component: DialogPage},
