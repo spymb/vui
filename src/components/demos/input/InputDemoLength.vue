@@ -3,7 +3,7 @@
 </demo>
 
 <template>
-  <Input v-model:value="value" :maxlength="5"/>
+  <Input v-model:value="value" :maxlength="5" placeholder="此处最大输入长度为5"/>
 </template>
 
 <script lang="ts">

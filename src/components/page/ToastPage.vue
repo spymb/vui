@@ -3,7 +3,6 @@
   <Demo :component="ToastDemoDefault" />
   <Demo :component="ToastDemoCloseTime" />
   <Demo :component="ToastDemoClose" />
-  <Demo :component="ToastDemoMiddle" />
   <Demo :component="ToastDemoText" />
   <Demo :component="ToastDemoLevel" />
   <Attrs :data="data"/>
@@ -15,14 +14,13 @@ import ToastDemoDefault from '../demos/toast/ToastDemoDefault.vue';
 import ToastDemoLevel from '../demos/toast/ToastDemoLevel.vue';
 import ToastDemoClose from '../demos/toast/ToastDemoClose.vue';
 import ToastDemoCloseTime from '../demos/toast/ToastDemoCloseTime.vue';
-import ToastDemoMiddle from '../demos/toast/ToastDemoMiddle.vue';
 import ToastDemoText from '../demos/toast/ToastDemoText.vue';
 import Demo from '../Demo.vue';
 import {ref} from 'vue';
 
 export default {
   components: {ToastDemoDefault, Demo, ToastDemoLevel, ToastDemoClose,
-    ToastDemoCloseTime, ToastDemoMiddle, ToastDemoText, Attrs
+    ToastDemoCloseTime, ToastDemoText, Attrs
   },
   setup() {
     const data = ref([
@@ -32,13 +30,6 @@ export default {
         type: 'string',
         select: '--',
         default: '--',
-      },
-      {
-        params: 'center',
-        desc: '文本内容居中',
-        type: 'boolean',
-        select: 'true / false',
-        default: 'false',
       },
       {
         params: 'delay',
@@ -68,7 +59,6 @@ export default {
       ToastDemoLevel,
       ToastDemoClose,
       ToastDemoCloseTime,
-      ToastDemoMiddle,
       ToastDemoText,
       Attrs, data
     }

@@ -17,12 +17,14 @@ export default {
     const onClick1 = () => {
       Toast({
         text: '可手动关闭的提示',
-        showClose: true,
+        center: false,
+        showClose: true
       });
     };
     const onClick2 = () => {
       Toast({
         text: '只可手动关闭的提示',
+        center: false,
         showClose: true,
         delay: 0
       });

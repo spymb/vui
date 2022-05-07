@@ -42,7 +42,7 @@ export default {
     center: {
       type: Boolean,
       required: false,
-      default: false,
+      default: true,
     },
     showClose: {
       type: Boolean,
