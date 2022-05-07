@@ -1,8 +1,7 @@
 <template>
   <div class="demo">
 
-    <h2>{{ component.__sourceCodeTitle }}</h2>
-
+    <h3>{{ component.__sourceCodeTitle }}</h3>
 
     <div class="demo-component">
       <component :is="component"/>
@@ -52,13 +51,10 @@ $border-color: #d9d9d9;
 .demo {
   border: 1px solid $border-color;
   margin: 16px 0 32px;
-
-  > h2 {
-    font-size: 20px;
-    padding: 8px 16px;
+  > h3 {
+    padding: 8px 10px;
     border-bottom: 1px solid $border-color;
   }
-
 
   &-component {
     padding: 10px;

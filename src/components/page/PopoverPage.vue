@@ -1,5 +1,5 @@
 <template>
-  <h1>Popover 组件示例</h1>
+  <h1>Popover 用法示例</h1>
   <Demo :component="PopoverDemo1" />
   <Demo :component="PopoverDemo2" />
   <Attrs :data="data"/>

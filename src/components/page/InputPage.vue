@@ -1,5 +1,5 @@
 <template>
-  <h1>Input 组件示例</h1>
+  <h1>Input 用法示例</h1>
   <Demo :component="InputDemoModel" />
   <Demo :component="InputDemoClear" />
   <Demo :component="InputDemoPassword" />

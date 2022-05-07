@@ -1,6 +1,6 @@
 <template>
   <div class="attrs">
-    <h2>Attributes</h2>
+    <h3>Attributes</h3>
 
     <table class="attrs-table">
       <thead>
@@ -38,11 +38,10 @@ export default {
   width: 100%;
   overflow-x: auto;
 
-  h2 {
-    font-weight: 400;
+  h3 {
+    padding: 0 6px;
     color: #1f2f3d;
-    font-size: 22px;
-    margin: 20px 0 20px;
+    margin: 20px 0 10px;
   }
 
   .attrs-table {

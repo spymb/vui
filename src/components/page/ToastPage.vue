@@ -1,5 +1,5 @@
 <template>
-  <h1>Toast 组件示例</h1>
+  <h1>Toast 用法示例</h1>
   <Demo :component="ToastDemoDefault" />
   <Demo :component="ToastDemoCloseTime" />
   <Demo :component="ToastDemoClose" />

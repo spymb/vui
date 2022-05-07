@@ -1,5 +1,5 @@
 <template>
-  <h1>Layout 组件示例</h1>
+  <h1>Layout 用法示例</h1>
   <Demo :component="LayoutDemo1" />
   <Demo :component="LayoutDemo2" />
   <Demo :component="LayoutDemo3" />

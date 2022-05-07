@@ -16,13 +16,7 @@
               <router-link to="/doc/button">Button</router-link>
             </li>
             <li>
-              <router-link to="/doc/switch">Switch</router-link>
-            </li>
-            <li>
               <router-link to="/doc/dialog">Dialog</router-link>
-            </li>
-            <li>
-              <router-link to="/doc/tabs">Tabs</router-link>
             </li>
             <li>
               <router-link to="/doc/input">Input</router-link>
@@ -33,8 +27,17 @@
             <li>
               <router-link to="/doc/popover">Popover</router-link>
             </li>
-            <li class="lastLi">
+            <li>
+              <router-link to="/doc/switch">Switch</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/tabs">Tabs</router-link>
+            </li>
+            <li>
               <router-link to="/doc/toast">Toast</router-link>
+            </li>
+            <li class="lastLi">
+              <a href="javascript:;">未完待续...</a>
             </li>
           </ol>
         </aside>
@@ -75,7 +78,7 @@ export default {
     display: flex;
     flex-grow: 1;
     padding-top: 55px;
-    padding-left: 156px;
+    padding-left: 155px;
     @media (max-width: 500px) {
       padding-left: 0;
     }

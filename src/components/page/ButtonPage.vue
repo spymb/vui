@@ -1,5 +1,5 @@
 <template>
-  <h1>Button 组件示例</h1>
+  <h1>Button 用法示例</h1>
   <Demo :component="ButtonDemo1"/>
   <Demo :component="ButtonDemo2"/>
   <Demo :component="ButtonDemo3"/>
