@@ -1,11 +1,9 @@
 <template>
   <div class="layout">
-    <TopNav/>
     <div class="banner">
       <h1>VUI</h1>
-      <h2>一个极简的UI 框架</h2>
+      <h2>一个极简的 UI 框架</h2>
       <p class="actions">
-        <a>GitHub</a>
         <router-link to="/doc">开始</router-link>
       </p>
     </div>
@@ -25,7 +23,7 @@
           <use xlink:href="#icon-ts"></use>
         </svg>
         <h3>基于 TypeScript </h3>
-        <p>源代码采用 TypeScript 书写</p>
+        <p>源代码采用 TypeScript 编写</p>
       </li>
       <li>
         <svg>
@@ -61,13 +59,15 @@ $color: #007974;
   > .banner {
     color: #307a04;
     flex-grow: 1;
-    padding: 100px 0;
+    padding-top: 30px;
+    padding-bottom: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
     > .actions {
+      margin-top: 10px;
       padding: 8px 0;
 
       a {
@@ -75,7 +75,7 @@ $color: #007974;
         background: #307a04;
         color: white;
         display: inline-block;
-        padding: 8px 24px;
+        padding: 8px 20px;
         border-radius: $border-radius;
 
         &:hover {
