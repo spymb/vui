@@ -37,10 +37,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$color: #307a04;
-
 .topNav {
-  color: $color;
+  color: #307a04;
   position: fixed;
   top: 0;
   left: 0;
@@ -49,7 +47,7 @@ $color: #307a04;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px;
+  padding: 8px 16px;
 
   > .logo {
     max-width: 6em;

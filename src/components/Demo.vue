@@ -2,9 +2,7 @@
   <div class="demo">
 
     <h2>{{ component.__sourceCodeTitle }}</h2>
-    <p v-if="component.__sourceDescription" class="description">
-      {{ component.__sourceDescription }}
-    </p>
+
 
     <div class="demo-component">
       <component :is="component"/>
@@ -60,6 +58,7 @@ $border-color: #d9d9d9;
     padding: 8px 16px;
     border-bottom: 1px solid $border-color;
   }
+
 
   &-component {
     padding: 10px;
