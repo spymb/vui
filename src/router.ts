@@ -11,8 +11,9 @@ import ToastPage from './components/page/ToastPage.vue';
 import InputPage from './components/page/InputPage.vue';
 import LayoutPage from './components/page/LayoutPage.vue';
 import PopoverPage from './components/page/PopoverPage.vue';
+import intro from './markdown/intro.md';
 
-const md = filename => h(Markdown, { path: `../markdown/${filename}.md`, key: filename })
+const md = string => h(Markdown, { content: string, key: string })
 const history = createWebHashHistory();
 export const router = createRouter({
   history: history,
@@ -21,7 +22,7 @@ export const router = createRouter({
     {
       path: '/doc', component: Doc,
       children: [
-        {path: 'intro', component: md('intro')},
+        {path: 'intro', component: md(intro)},
         {path: 'switch', component: SwitchPage},
         {path: 'button', component: ButtonPage},
         {path: 'dialog', component: DialogPage},
