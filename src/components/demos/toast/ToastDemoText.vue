@@ -15,11 +15,9 @@ export default {
   setup() {
     const onClick = () => {
       Toast({
-        text: `你知道我在等你吗`,
-        center: true
+        text: `你如果真的在乎我`
       });
     };
-
     return { onClick };
   },
 };

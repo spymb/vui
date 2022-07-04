@@ -1,11 +1,18 @@
-import { createVNode, render, VNode } from 'vue';
+import {createVNode, render, VNode} from 'vue';
 import ToastMaker from './ToastMaker.vue';
-import type { ToastProps } from './toast.d';
+import type {ToastProps} from './toast.d';
 
 const toastQueue: Array<VNode> = [];
 let current = 1;
 
-const Toast = (options: ToastProps) => {
+const Toast = (options: ToastProps = {
+  text: '你知道我在等你吗',
+  type: 'normal',
+  delay: 3,
+  showClose: false,
+  top: 10,
+  id: ''
+}) => {
   const _options = {
     ...options,
     id: `gulu-toast-${current++}`,
@@ -31,8 +38,7 @@ const onDestroy = (id: string, wrapper: HTMLDivElement) => {
   render(null, wrapper);
   wrapper.remove();
   const currentIndex = toastQueue.findIndex(item => {
-    const _id = item.component.props.id;
-    return _id === id;
+    return item.component.props.id === id;
   });
   if (currentIndex === -1) return;
   const h = toastQueue[currentIndex].el.offsetHeight;
@@ -43,4 +49,4 @@ const onDestroy = (id: string, wrapper: HTMLDivElement) => {
   }
 };
 
-export { Toast };
+export {Toast};

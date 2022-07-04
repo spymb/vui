@@ -14,8 +14,10 @@
     <Footer>Footer</Footer>
   </Layout>
 </template>
+
 <script>
 import {Layout, Header, Footer, Content, Aside} from '../../../lib/layout';
+
 export default {
   components: {Layout, Header, Footer, Content, Aside}
 };

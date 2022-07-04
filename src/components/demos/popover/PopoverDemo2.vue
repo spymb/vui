@@ -1,13 +1,6 @@
 <demo>悬浮触发</demo>
 
 <template>
-  <Popover position="left" trigger="hover">
-    <template v-slot:content>
-      弹出内容
-    </template>
-    <Button>左侧弹出</Button>
-  </Popover>
-
   <Popover trigger="hover">
     <template v-slot:content>
       弹出内容
@@ -20,6 +13,13 @@
       弹出内容
     </template>
     <Button>下方弹出</Button>
+  </Popover>
+
+  <Popover position="left" trigger="hover">
+    <template v-slot:content>
+      弹出内容
+    </template>
+    <Button>左侧弹出</Button>
   </Popover>
 
   <Popover position="right" trigger="hover">

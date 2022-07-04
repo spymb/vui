@@ -1,42 +1,44 @@
 <template>
   <div
       :class="{ [`gulu-input-wrapper-size-${size}`]: size }"
-      :style="`width:${width}`"
       class="gulu-input-wrapper"
   >
     <span v-if="label" class="gulu-label left">{{ label }}</span>
+
     <input
+        class="gulu-input"
+        :class="classes"
         ref="inputRef"
         v-bind="$attrs"
-        :class="classes"
         :disabled="disabled"
         :maxlength="maxlength"
         :placeholder="placeholder"
         :readonly="readonly"
         :type="type === 'password' ? (passwordVisible ? 'text' : 'password') : type"
+
         :value="value"
-        class="gulu-input"
-        @blur="onBlur"
+        @input="onInput"
         @change="onChange"
         @focus="onFocus"
-        @input="onInput"
+        @blur="onBlur"
         @keydown="onKeydown"
     />
 
     <Icon
         v-if="clearable"
-        :style="`transform: translateX(${actionIconTransform}px)`"
         class="gulu-input-action"
+        :style="`transform: translateX(${actionIconTransform}px)`"
         name="close2"
         @click="onClear"
     />
     <Icon
         v-if="type === 'password'"
-        :name="passwordVisible ? 'see' : 'nosee'"
-        :style="`transform: translateX(${actionIconTransform + 24}px)`"
         class="gulu-input-action"
+        :style="`transform: translateX(${actionIconTransform + 24}px)`"
+        :name="passwordVisible ? 'see' : 'nosee'"
         @click="onTogglePasswordVisible"
     />
+
     <span v-if="labelRight" ref="labelRightRef" class="gulu-label right">{{ labelRight }}</span>
   </div>
 </template>
@@ -49,7 +51,6 @@ import Icon from '../components/Icon.vue';
 type InputStatusType = 'normal' | 'secondary' | 'error' | 'warning' | 'success';
 type InputSizeType = 'mini' | 'small' | 'medium' | 'large';
 type InputElementEvent = Event & { target: HTMLInputElement };
-
 interface InputProps {
   value: string | number;
   type: string;
@@ -97,10 +98,6 @@ export default {
       type: Boolean,
       required: false,
     },
-    width: {
-      type: String,
-      required: false,
-    },
     label: {
       type: String,
       required: false,
@@ -127,11 +124,11 @@ export default {
     },
   },
   emits: ['update:value', 'input', 'change', 'blur', 'focus', 'keydown', 'clear'],
+
   setup(props: InputProps, { emit }) {
-    const labelRightRef = ref<HTMLSpanElement>(null);
     const inputRef = ref<HTMLInputElement>(null);
     const passwordVisible = ref(false);
-
+    const labelRightRef = ref<HTMLSpanElement>(null);
     const classes = computed(() => ({
       'gulu-input-label-left': props.label,
       'gulu-input-label-right': props.labelRight,
@@ -139,18 +136,11 @@ export default {
       'gulu-input-suffix-password': props.type === 'password',
       [`gulu-input-status-${props.status}`]: props.status,
     }));
-
     const actionIconTransform = computed(() => {
       const labelRightOffsetWidth = labelRightRef.value ? labelRightRef.value.offsetWidth : 0;
       const passwordIconOffsetWidth = props.type === 'password' ? 24 : 0;
       return -labelRightOffsetWidth - passwordIconOffsetWidth;
     });
-
-    const focus = () => {
-      nextTick(() => {
-        inputRef.value.focus();
-      });
-    };
 
     const onClear = () => {
       emit('update:value', '');
@@ -158,12 +148,15 @@ export default {
       emit('clear');
       focus();
     };
-
     const onTogglePasswordVisible = () => {
       passwordVisible.value = !passwordVisible.value;
       focus();
     };
-
+    const focus = () => {
+      nextTick(() => {
+        inputRef.value.focus();
+      });
+    };
     const onInput = (event: InputElementEvent) => {
       emit('update:value', event.target.value);
       emit('input', event.target.value);

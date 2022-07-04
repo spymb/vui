@@ -6,9 +6,7 @@ const Layout = {
       if (slots?.default) {
         const children: Array<VNode> = slots.default();
         return children.some(child => {
-          const tag = (child.type as Component).name;
-          return tag === 'Aside';
-
+          return (child.type as Component).name === 'Aside';
         });
       } else {
         return false;

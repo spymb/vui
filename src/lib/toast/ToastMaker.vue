@@ -3,8 +3,6 @@
       v-show="visible"
       :class="classes"
       :style="{ top: `${top}px` }"
-      @mouseenter="clearTimer"
-      @mouseleave="startTimer"
   >
     <span>{{ text }}</span>
 
@@ -25,7 +23,7 @@ export default {
     text: {
       type: String,
       required: false,
-      default: '',
+      default: '你知道我在等你吗',
     },
     type: {
       type: String as PropType<ToastType>,
@@ -38,11 +36,6 @@ export default {
       type: Number,
       required: false,
       default: 3,
-    },
-    center: {
-      type: Boolean,
-      required: false,
-      default: true,
     },
     showClose: {
       type: Boolean,
@@ -61,29 +54,17 @@ export default {
     },
   },
   emits: ['destroy'],
+
   setup(props: ToastProps, {emit}) {
     const visible = ref(false);
     const timer = ref(null);
 
-    const classes = computed(() => [
-      'gulu-toast',
-      {
-        'gulu-toast-center': props.center,
-        [`gulu-toast-${props.type}`]: props.type,
-      },
-    ]);
-
     onMounted(() => {
       visible.value = true;
-      startTimer();
+      close();
     });
 
-    const handleClose = () => {
-      visible.value = false;
-      emit('destroy');
-    };
-
-    const startTimer = () => {
+    const close = () => {
       if (props.delay > 0) {
         timer.value = setTimeout(() => {
           handleClose();
@@ -91,12 +72,20 @@ export default {
       }
     };
 
-    const clearTimer = () => {
-      clearTimeout(timer.value);
-      timer.value = null;
+    const handleClose = () => {
+      visible.value = false;
+      emit('destroy');
     };
 
-    return {visible, classes, handleClose, startTimer, clearTimer};
+    const classes = computed(() => [
+      'gulu-toast',
+      {
+        'gulu-toast-left': props.showClose,
+        [`gulu-toast-${props.type}`]: props.type,
+      },
+    ]);
+
+    return {visible, classes, handleClose, close};
   },
 };
 </script>
@@ -120,6 +109,7 @@ $success: #0062ec;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
   padding: 10px 15px;
   transition: top 0.3s;
+  text-align: center;
 
   > .gulu-toast-close {
     margin-left: 50px;
@@ -136,8 +126,8 @@ $success: #0062ec;
     }
   }
 
-  &-center {
-    text-align: center;
+  &-left {
+    text-align: left;
   }
 
   &-secondary {
@@ -160,3 +150,4 @@ $success: #0062ec;
   }
 }
 </style>
+

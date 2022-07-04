@@ -20,35 +20,30 @@ export default {
     const onClick1 = () => {
       Toast({
         text: `这是一条普通提示`,
-        center: true,
         type: 'normal',
       });
     };
     const onClick2 = () => {
       Toast({
         text: `这是一条次要提示`,
-        center: true,
         type: 'secondary',
       });
     };
     const onClick3 = () => {
       Toast({
         text: `这是一条成功提示`,
-        center: true,
         type: 'success',
       });
     };
     const onClick4 = () => {
       Toast({
         text: `这是一条警告提示`,
-        center: true,
         type: 'warning',
       });
     };
     const onClick5 = () => {
       Toast({
         text: `这是一条错误提示`,
-        center: true,
         type: 'error',
       });
     };
