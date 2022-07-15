@@ -42,6 +42,7 @@
           </ol>
         </aside>
       </transition>
+
       <main>
         <router-view/>
       </main>
