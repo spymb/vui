@@ -57,7 +57,6 @@ export default {
 
   setup(props: ToastProps, {emit}) {
     const visible = ref(false);
-    const timer = ref(null);
 
     onMounted(() => {
       visible.value = true;
@@ -66,7 +65,7 @@ export default {
 
     const close = () => {
       if (props.delay > 0) {
-        timer.value = setTimeout(() => {
+        setTimeout(() => {
           handleClose();
         }, props.delay * 1000);
       }
